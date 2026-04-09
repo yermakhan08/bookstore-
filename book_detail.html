@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block body %}
+
+<h2 class="text-3xl font-bold mb-4">{{ book["title"] }}</h2>
+
+<div class="bg-white p-6 rounded-xl shadow">
+    <p><b>Author:</b> {{ book["author"] }}</p>
+    <p><b>Price:</b> {{ book["price"] }}₸</p>
+    <p><b>Stock:</b> {{ book["stock"] }}</p>
+</div>
+
+{% endblock %}
