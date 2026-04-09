@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block body %}
+<h1>Books</h1>
+<div class="grid">
+    {% for b in books %}
+    <div class="card">
+        <img src="{{ b['image'] }}" alt="{{ b['title'] }}">
+        <div class="card-body">
+            <b>{{ b['title'] }}</b>
+            <p>{{ b['author'] }}</p>
+            <p>{{ b['price'] }}₸</p>
+            <a href="/book/{{ b['id'] }}">View</a>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
