@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block body %}
+
+<h2 class="text-3xl font-bold mb-4">All Books</h2>
+
+<div class="space-y-3">
+    {% for b in books %}
+    <div class="bg-white p-4 rounded-lg shadow">
+        <b class="text-xl">{{ b["title"] }}</b><br>
+        <span class="text-gray-600">{{ b["author"] }}</span><br>
+        <span class="font-semibold">{{ b["price"] }}₸</span><br>
+
+        <a href="/book/{{ b['id'] }}" class="text-blue-600 hover:underline">
+            View →
+        </a>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}
